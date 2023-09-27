@@ -1,5 +1,3 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import {
     Card,
@@ -15,9 +13,16 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "../ui/textarea"
 import { GiMonkey, GiToken } from "react-icons/gi"
 
-export function UpdateMetadataForm() {
-    return (
-        <Card>
+const UpdateMetadataForm = () => {
+  return (
+    <>
+      <section id="about" className="about">
+        <div id="updatemate" className="container">
+          <div id="aboutmore" className="row">
+            <div
+              className="col-lg-12 text-center order-1 order-lg-2"
+              >
+               <Card>
             <CardHeader className="space-y-1">
                 <CardTitle className="text-2xl">Update Metadata</CardTitle>
                 <CardDescription>
@@ -30,8 +35,7 @@ export function UpdateMetadataForm() {
                         <RadioGroupItem
                             value="paypal"
                             id="paypal"
-                            className="peer sr-only"
-                        />
+                            className="peer sr-only" />
                         <Label
                             htmlFor="paypal"
                             className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
@@ -74,5 +78,13 @@ export function UpdateMetadataForm() {
                 <Button className="w-full">Notify Metadata Update</Button>
             </CardFooter>
         </Card>
-    )
-}
+            </div>
+            
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default UpdateMetadataForm;
