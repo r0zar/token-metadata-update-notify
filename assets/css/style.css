@@ -7,7 +7,7 @@ golbal colour:
 backgroung-color: black;
 text-paragraph-color: #fff;
 title-colour: #c0cad1;
-hover-color: red;
+hover-color: #0d6efd;
 hover-backgroung: black;
 input: #586a77 or #0c1318 or #15222b
  */
@@ -18,17 +18,17 @@ body {
 }
 
 a {
-  color: red;
+  color: #0d6efd;
   cursor: pointer;
   text-decoration: none !important;
 }
 
 a:hover {
-  color: red;
+  color: #0d6efd;
   text-decoration: none;
 }
 #paint {
-  color: red;
+  color: #0d6efd;
 }
 h1,
 h2,
@@ -49,7 +49,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: red;
+  background: #0d6efd;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -91,7 +91,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid red;
+  border: 6px solid #0d6efd;
   border-top-color: #ffe9e3;
   border-radius: 50%;
   width: 60px;
@@ -207,7 +207,7 @@ h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: red;
+  background-color: #0d6efd;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -224,7 +224,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: red;
+  color: #0d6efd;
 }
 
 .navbar .getstarted,
@@ -232,15 +232,15 @@ h6 {
   padding: 8px 25px;
   margin-left: 30px;
   border-radius: 4px;
-  color: red;
-  border: 2px solid red;
+  color: #0d6efd;
+  border: 2px solid #0d6efd;
 }
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
   color: #000;
-  background: #a80c0c;
-  border-color: red;
+  background: #0d6efd;
+  border-color: #0d6efd;
 }
 
 .navbar>ul>li>.getstarted:before {
@@ -282,7 +282,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: red;
+  color: #0d6efd;
 }
 
 .navbar .dropdown:hover>ul {
@@ -378,7 +378,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: red;
+  color: #0d6efd;
 }
 
 .navbar-mobile .getstarted,
@@ -413,7 +413,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: red;
+  color: #0d6efd;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -480,13 +480,13 @@ h6 {
   border-radius: 4px;
   transition: 0.5s;
   color: #000;
-  background: red;
-  border: 2px solid red;
+  background: #0d6efd;
+  border: 2px solid #0d6efd;
 }
 
 #hero .btn-get-started:hover {
-  color: red;
-  border-color: red;
+  color: #0d6efd;
+  border-color: #0d6efd;
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -510,7 +510,7 @@ h6 {
 }
 
 #hero .btn-watch-video:hover i {
-  color: red;
+  color: #0d6efd;
 }
 
 @media (min-width: 1024px) {
@@ -607,6 +607,7 @@ section {
   border-radius: 10px;
   height: 400px;
   width: 500px;
+  filter: invert(1);
 
 }
 .about .count-box {
@@ -678,7 +679,7 @@ section {
 
 .about .content ul i {
   font-size: 24px;
-  color: red;
+  color: #0d6efd;
   position: absolute;
   left: 0;
   top: -2px;
@@ -691,7 +692,7 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(red 50%, rgba(255, 74, 23, 0.4) 52%);
+  background: radial-gradient(#0d6efd 50%, rgba(255, 74, 23, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -727,14 +728,14 @@ section {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid red;
+  border: 5px solid #0d6efd;
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
 }
 
 .about .play-btn:hover::after {
-  border-left: 15px solid red;
+  border-left: 15px solid #0d6efd;
   transform: scale(20);
 }
 
@@ -814,7 +815,7 @@ section {
   height: 64px;
   padding-top: 5px;
   text-align: center;
-  background-color: red;
+  background-color: #0d6efd;
   border-radius: 4px;
   text-align: center;
   border: 4px solid #fff;
@@ -836,7 +837,7 @@ section {
 }
 
 .about-boxes .card-title a:hover {
-  color: red;
+  color: #0d6efd;
   
 }
 
@@ -846,7 +847,7 @@ section {
 
 .about-boxes .card:hover .card-icon i {
   background: black;
-  color: red;
+  color: #0d6efd;
 }
 
 @media (max-width: 1024px) {
@@ -913,13 +914,13 @@ section {
 }
 
 .features .nav-link:hover {
-  color: red;
+  color: #0d6efd;
 }
 
 .features .nav-link.active {
-  background: red;
+  background: #0d6efd;
   color: #fff;
-  border-color: red;
+  border-color: #0d6efd;
 }
 
 @media (max-width: 768px) {
@@ -961,7 +962,7 @@ section {
 .features .tab-pane ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: red;
+  color: #0d6efd;
 }
 
 .features .tab-pane p:last-child {
@@ -998,7 +999,7 @@ section {
 }
 
 .services .icon-box .icon-box:hover h4 a {
-  color: red;
+  color: #0d6efd;
 }
 
 .services .icon-box p {
@@ -1008,7 +1009,7 @@ section {
 }
 
 .services .icon-box:hover h4 a {
-  color: red;
+  color: #0d6efd;
 }
 
 /*--------------------------------------------------------------
@@ -1085,7 +1086,7 @@ section {
 
 #footer .footer-top .footer-info h3 {
   font-size: 28px;
-  color: red;
+  color: #0d6efd;
   margin: 0 0 15px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
@@ -1116,7 +1117,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: red;
+  background: #0d6efd;
   color: #fff;
   text-decoration: none;
 }
@@ -1124,7 +1125,7 @@ section {
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: 600;
-  color: red;
+  color: #0d6efd;
   position: relative;
   padding-bottom: 12px;
 }
@@ -1141,7 +1142,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: red;
+  color: #0d6efd;
   font-size: 18px;
   line-height: 1;
 }
@@ -1164,7 +1165,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: red;
+  color: #0d6efd;
 }
 
 #footer .footer-top .footer-newsletter form {
@@ -1190,14 +1191,14 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: red;
+  background: #0d6efd;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
 }
 
 #footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: red;
+  background: #0d6efd;
 }
 
 #footer .copyright {
@@ -1205,13 +1206,13 @@ section {
   padding-top: 30px;
 }
 
-#footer .credits {
+#footer .c#0d6efdits {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
   color: #fff;
 }
 
-#footer .credits a {
+#footer .c#0d6efdits a {
   transition: 0.3s;
 }

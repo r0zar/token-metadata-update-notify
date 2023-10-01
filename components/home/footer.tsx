@@ -4,13 +4,13 @@ const Footer = () => {
   return (
     <>
       <footer id="footer">
-       
+
 
         <div className="container">
           <div className="copyright">
             &copy; Copyright{" "}
             <strong>
-              <span style={{ color: "red" }}>MatadataUpdate,</span>
+              <span style={{ color: "#0d6efd" }}>TMUN </span>
             </strong>
             2023 {/* . All Rights Reserved */}
           </div>
