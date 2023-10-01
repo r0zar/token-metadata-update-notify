@@ -541,6 +541,10 @@ section {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+#shadow-host-content {
+  padding: 0px;
+}
+
 .section-bg {
   background-color: #a486bd;
 }

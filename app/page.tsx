@@ -18,15 +18,15 @@ import '../assets/vendor/swiper/swiper-bundle.min.css';
 
 
 export default function Home() {
-  
+
   return (
     <>
-       <Header />
+      <Header />
       <About />
       <Services />
       <UpdateMetadataForm />
       <Footer />
-      
+
     </>
   );
 }
