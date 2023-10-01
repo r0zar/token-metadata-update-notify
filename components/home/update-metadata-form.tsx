@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import {
     Card,
@@ -12,8 +14,12 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "../ui/textarea"
 import { GiMonkey, GiToken } from "react-icons/gi"
+import React from "react"
 
 const UpdateMetadataForm = () => {
+
+    const [selected, setSelected] = React.useState("ft")
+
     return (
         <>
             <section id="about" className="about">
@@ -29,14 +35,14 @@ const UpdateMetadataForm = () => {
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="grid gap-4">
-                                <RadioGroup defaultValue="paypal" className="grid grid-cols-2 gap-4">
+                                <RadioGroup defaultValue="ft" className="grid grid-cols-2 gap-4" onValueChange={(v) => setSelected(v)}>
                                     <div>
                                         <RadioGroupItem
-                                            value="paypal"
-                                            id="paypal"
+                                            value="ft"
+                                            id="ft"
                                             className="peer sr-only" />
                                         <Label
-                                            htmlFor="paypal"
+                                            htmlFor="ft"
                                             className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                                         >
                                             <GiToken className="mb-3 h-6 w-6" />
@@ -44,9 +50,9 @@ const UpdateMetadataForm = () => {
                                         </Label>
                                     </div>
                                     <div>
-                                        <RadioGroupItem value="apple" id="apple" className="peer sr-only" />
+                                        <RadioGroupItem value="nft" id="nft" className="peer sr-only" />
                                         <Label
-                                            htmlFor="apple"
+                                            htmlFor="nft"
                                             className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                                         >
                                             <GiMonkey className="mb-3 h-6 w-6" />
@@ -68,10 +74,10 @@ const UpdateMetadataForm = () => {
                                     <Label>Contract Identifier</Label>
                                     <Input />
                                 </div>
-                                <div className="grid gap-2">
+                                {selected === 'nft' && <div className="grid gap-2">
                                     <Label>Token IDs</Label>
                                     <Textarea />
-                                </div>
+                                </div>}
                             </CardContent>
                             <CardFooter>
                                 <Button className="w-full">Notify Metadata Update</Button>

@@ -541,7 +541,11 @@ section {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-#shadow-host-content {
+#loom-companion-mv3 {
+  background: #0c1318;
+}
+
+#shadow-host-companion {
   padding: 0px;
 }
 
