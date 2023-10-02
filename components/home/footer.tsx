@@ -8,7 +8,7 @@ const Footer = () => {
 
         <div className="container">
           <div className="copyright">
-            &copy; Copyright{" "}
+            Build on Stacks,{" "}
             <strong>
               <span style={{ color: "#0d6efd" }}>TMUN </span>
             </strong>
