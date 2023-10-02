@@ -15,10 +15,42 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "../ui/textarea"
 import { GiMonkey, GiToken } from "react-icons/gi"
 import React from "react"
+import { useConnect } from "@stacks/connect-react"
+import { StacksMainnet } from "@stacks/network";
+import { AnchorMode, PostConditionMode, stringUtf8CV, contractPrincipalCV, parseToCV } from "@stacks/transactions";
+import { userSession } from "../stacks-session/connect"
 
 const UpdateMetadataForm = () => {
 
     const [selected, setSelected] = React.useState("ft")
+    const [contractIdentifier, setContractIdentifier] = React.useState("")
+    const { doContractCall } = useConnect();
+
+
+    function updateMetadata() {
+        doContractCall({
+            network: new StacksMainnet(),
+            anchorMode: AnchorMode.Any,
+            contractAddress: "SP1H6HY2ZPSFPZF6HBNADAYKQ2FJN75GHVV95YZQ",
+            contractName: "token-metadata-update-notify",
+            functionName: selected === 'ft' ? "ft-metadata-update-notify" : "nft-metadata-update-notify",
+            functionArgs: [contractPrincipalCV(contractIdentifier.split('.')[0], contractIdentifier.split('.')[1])],
+            postConditionMode: PostConditionMode.Deny,
+            postConditions: [],
+            onFinish: (data) => {
+                console.log("onFinish:", data);
+                (window as any)
+                    .open(
+                        `https://explorer.hiro.so/txid/${data.txId}?chain=mainnet`,
+                        "_blank"
+                    )
+                    .focus();
+            },
+            onCancel: () => {
+                console.log("onCancel:", "Transaction was canceled");
+            },
+        });
+    }
 
     return (
         <>
@@ -72,15 +104,15 @@ const UpdateMetadataForm = () => {
                                 </div>
                                 <div className="grid gap-2">
                                     <Label>Contract Identifier</Label>
-                                    <Input />
+                                    <Input onChange={e => setContractIdentifier(e.target.value)} />
                                 </div>
                                 {selected === 'nft' && <div className="grid gap-2">
                                     <Label>Token IDs</Label>
-                                    <Textarea />
+                                    <Textarea disabled />
                                 </div>}
                             </CardContent>
                             <CardFooter>
-                                <Button className="w-full">Notify Metadata Update</Button>
+                                <Button className="w-full" onClick={updateMetadata}>Notify Metadata Update</Button>
                             </CardFooter>
                         </Card>
                     </div>

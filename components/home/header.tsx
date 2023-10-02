@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { initHeaderScrolled } from "../../assets/js/headerScrolled";
+import { Connect } from "@stacks/connect-react";
+import ConnectWallet, { userSession } from "../stacks-session/connect";
 
 const Header = () => {
 
@@ -29,9 +31,7 @@ const Header = () => {
 
 
               <li>
-                <a className="getstarted scrollto">
-                  Connect Wallet
-                </a>
+                <ConnectWallet />
               </li>
             </ul>
             <i className="bi bi-list mobile-nav-toggle"></i>
