@@ -6,7 +6,7 @@ const Services = () => {
     <section id="about-boxes" className="about-boxes">
       <div className="container">
         <div className="section-title">
-          <h2>It Works</h2>
+          <h2>Metadata Updater</h2>
           <p>How It Works</p>
         </div>
 
