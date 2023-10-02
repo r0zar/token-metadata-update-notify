@@ -17,8 +17,7 @@ import { GiMonkey, GiToken } from "react-icons/gi"
 import React from "react"
 import { useConnect } from "@stacks/connect-react"
 import { StacksMainnet } from "@stacks/network";
-import { AnchorMode, PostConditionMode, stringUtf8CV, contractPrincipalCV, parseToCV } from "@stacks/transactions";
-import { userSession } from "../stacks-session/connect"
+import { AnchorMode, PostConditionMode, contractPrincipalCV } from "@stacks/transactions";
 
 const UpdateMetadataForm = () => {
 
